@@ -12,10 +12,6 @@ module.exports = Object.assign(webpackConfig, {
   },
 
   plugins: webpackConfig.plugins.concat([
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     names: ['manifest']
-    // }),
-
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['dist'],
     }),
