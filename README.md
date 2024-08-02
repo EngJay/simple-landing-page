@@ -6,13 +6,19 @@
 
 ## Usage
 
-The domain is automatically populated from the environment.
+The title, contact email address, and color palette are settable with defaults. All three are strings but the `PALETTE` must be a valid [colorbrewer palette](http://bl.ocks.org/mbostock/5577023) (i.e. 'YlGnBu' or 'RdBu').
 
-The email address is set by adding a secret in your repository settings or
-setting an environment variable on the CLI.
+To set them, set an environment variable before running the build.
 
-- **Name:** `CONTACT_EMAIL`
-- **Value:** `<EMAIL_ADDRESS>`
+```cli
+EMAIL=me@example.com PALETTE=Blues TITLE="My Site" npm run build
+```
+
+| Name | Description | Default |
+| :---- | :---------  | :------- |
+| EMAIL | Email address used the contact email address | `contact@example.com` |
+| TITLE | Title displayed with the contact email | `example.com` |
+| PALETTE | Colorbrewer pallete to use as the color scheme | `random` |
 
 ## Development
 

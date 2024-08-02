@@ -18,14 +18,14 @@ function addContactMail(address) {
 }
 
 function updateTitle() {
-  elTitleHeader.innerHTML = document.title = window.location.hostname;
+  elTitleHeader.innerHTML = document.title = TITLE;
 }
 
 function drawPattern() {
   const pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight,
-    xColors: 'random',
+    xColors: PALETTE,
     cellSize: 80,
   });
 

@@ -5,9 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Is the current build a development build
-const IS_DEV = process.env.NODE_ENV === 'dev';
-const TITLE = process.env.TITLE || 'example.com';
 const CONTACT_EMAIL = process.env.EMAIL || 'contact@example.com';
+const IS_DEV = process.env.NODE_ENV === 'dev';
+const PALETTE = process.env.PALETTE || 'random';
+const TITLE = process.env.TITLE || 'example.com';
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
@@ -34,6 +35,8 @@ module.exports = {
     new webpack.DefinePlugin({
       CONTACT_MAIL: JSON.stringify(contactMail),
       IS_DEV,
+      PALETTE: JSON.stringify(PALETTE),
+      TITLE: JSON.stringify(TITLE),
     }),
 
     new HtmlWebpackPlugin({
