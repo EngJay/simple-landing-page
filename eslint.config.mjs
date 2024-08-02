@@ -1,16 +1,16 @@
-import js from '@eslint/js';
-import prettier from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import js from "@eslint/js";
+import prettier from "eslint-plugin-prettier";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
-    ignores: ['node_modules/', 'dist/', 'build/'],
+    ignores: ["node_modules/", "dist/", "build/"],
   },
   {
-    files: ['**/*.js', '**/*.jsx'],
+    files: ["**/*.js", "**/*.jsx"],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -25,7 +25,13 @@ export default [
       prettier,
     },
     rules: {
-      'prettier/prettier': 'error',
+      "prettier/prettier": [
+        "error",
+        {
+          singleQuote: true,
+          parser: "flow",
+        },
+      ],
     },
   },
 ];

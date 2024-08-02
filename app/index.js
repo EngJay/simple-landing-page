@@ -1,14 +1,14 @@
 // Styles
-import "styles/index.scss";
+import 'styles/index.scss';
 
 // Libs
-import debounce from "debounce";
-import Trianglify from "trianglify";
-import mailRedactor from "mail-redactor";
+import debounce from 'debounce';
+import Trianglify from 'trianglify';
+import mailRedactor from 'mail-redactor';
 
-const elCanvasWrapper = document.getElementById("trianglify-wrapper");
-const elTitleHeader = document.getElementById("title-header");
-const elEmail = document.getElementById("contact-mail");
+const elCanvasWrapper = document.getElementById('trianglify-wrapper');
+const elTitleHeader = document.getElementById('title-header');
+const elEmail = document.getElementById('contact-mail');
 
 function addContactMail(address) {
   const mail = atob(address);
@@ -25,16 +25,16 @@ function drawPattern() {
   const pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight,
-    xColors: "random",
+    xColors: 'random',
     cellSize: 80,
   });
 
-  elCanvasWrapper.innerHTML = "";
+  elCanvasWrapper.innerHTML = '';
   elCanvasWrapper.appendChild(pattern.toCanvas());
 }
 
 window.addEventListener(
-  "resize",
+  'resize',
   debounce(() => {
     drawPattern();
   }, 200),

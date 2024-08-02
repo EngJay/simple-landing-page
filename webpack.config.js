@@ -1,32 +1,32 @@
-const path = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Is the current build a development build
-const IS_DEV = process.env.NODE_ENV === "dev";
-const TITLE = process.env.TITLE || "example.com";
-const CONTACT_EMAIL = process.env.EMAIL || "contact@example.com";
+const IS_DEV = process.env.NODE_ENV === 'dev';
+const TITLE = process.env.TITLE || 'example.com';
+const CONTACT_EMAIL = process.env.EMAIL || 'contact@example.com';
 
-const dirNode = "node_modules";
-const dirApp = path.join(__dirname, "app");
-const dirAssets = path.join(__dirname, "assets");
+const dirNode = 'node_modules';
+const dirApp = path.join(__dirname, 'app');
+const dirAssets = path.join(__dirname, 'assets');
 
-const contactMail = Buffer.from(CONTACT_EMAIL).toString("base64");
+const contactMail = Buffer.from(CONTACT_EMAIL).toString('base64');
 
 /**
  * Webpack Configuration
  */
 module.exports = {
   entry: {
-    bundle: path.join(dirApp, "index"),
+    bundle: path.join(dirApp, 'index'),
   },
   output: {
-    filename: IS_DEV ? "[name].js" : "[name].[fullhash].js", // Updated to use [fullhash]
-    path: path.resolve(__dirname, "dist"),
+    filename: IS_DEV ? '[name].js' : '[name].[fullhash].js', // Updated to use [fullhash]
+    path: path.resolve(__dirname, 'dist'),
   },
-  mode: IS_DEV ? "development" : "production",
+  mode: IS_DEV ? 'development' : 'production',
   resolve: {
     modules: [dirNode, dirApp, dirAssets],
   },
@@ -37,7 +37,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "index.ejs"),
+      template: path.join(__dirname, 'index.ejs'),
       title: TITLE,
       minify: {
         collapseWhitespace: true,
@@ -45,8 +45,8 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: IS_DEV ? "[name].css" : "[name].[fullhash].css", // Updated to use [fullhash]
-      chunkFilename: IS_DEV ? "[id].css" : "[id].[fullhash].css", // Updated to use [fullhash]
+      filename: IS_DEV ? '[name].css' : '[name].[fullhash].css', // Updated to use [fullhash]
+      chunkFilename: IS_DEV ? '[id].css' : '[id].[fullhash].css', // Updated to use [fullhash]
     }),
 
     new CleanWebpackPlugin(),
@@ -56,11 +56,11 @@ module.exports = {
       // BABEL
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules\/(?!(mail-redactor)\/).*/,
         options: {
           compact: true,
-          presets: ["@babel/preset-env"],
+          presets: ['@babel/preset-env'],
         },
       },
 
@@ -68,9 +68,9 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          IS_DEV ? "style-loader" : MiniCssExtractPlugin.loader,
+          IS_DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: IS_DEV,
             },
@@ -82,15 +82,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          IS_DEV ? "style-loader" : MiniCssExtractPlugin.loader,
+          IS_DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: IS_DEV,
             },
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: IS_DEV,
               sassOptions: {
