@@ -16,20 +16,11 @@ EMAIL=me@example.com PALETTE=Blues TITLE="My Site" npm run build
 
 | Name | Description | Default |
 | :---- | :---------  | :------- |
-| EMAIL | Email address used the contact email address | `contact@example.com` |
+| EMAIL | Email address used as the contact email address | `contact@example.com` |
 | TITLE | Title displayed with the contact email | `example.com` |
 | PALETTE | Colorbrewer pallete to use as the color scheme | `random` |
 
-## Development
-
-Run the local webpack-dev-server with livereload and autocompile on
-[http://localhost:8080](http://localhost:8080).
-
-```cli
-npm run dev
-```
-
-## Deployment
+## Build
 
 Build the application for deployment.
 
@@ -39,3 +30,12 @@ npm run build
 
 The deployable build artifacts will be written to a `dist` directory in the repo
 root.
+
+## Development
+
+Run the local webpack-dev-server with livereload and autocompile on
+[http://localhost:8080](http://localhost:8080).
+
+```cli
+npm run dev
+```
