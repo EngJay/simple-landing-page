@@ -39,3 +39,11 @@ Run the local webpack-dev-server with livereload and autocompile on
 ```cli
 npm run dev
 ```
+
+## Credits
+
+This is a fork of the original
+[landing page template repo](https://github.com/cvgellhorn/landing-page-template)
+made by [@cvgellhorn](https://github.com/cvgellhorn). I liked it so much I
+updated its dependencies to current and made a few changes so the color palette
+and title are settable.
