@@ -1,6 +1,8 @@
-# Landing Page Template
+# Simple Landing Page Placeholder
 
-*A simple landing page template with built-in email protection.*
+[![CI](https://github.com/EngJay/landing-page-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/EngJay/landing-page-template/actions/workflows/ci.yaml) &nbsp;![GitHub Release](https://img.shields.io/github/v/release/EngJay/landing-page-template) &nbsp;![GitHub License](https://img.shields.io/github/license/EngJay/landing-page-template)
+
+*A simple landing page placeholder with built-in email protection.*
 
 ![screenshot](screenshot.jpeg)
 
@@ -39,3 +41,11 @@ Run the local webpack-dev-server with livereload and autocompile on
 ```cli
 npm run dev
 ```
+
+## Credits
+
+This is a fork of the original
+[landing page template repo](https://github.com/cvgellhorn/landing-page-template)
+made by [@cvgellhorn](https://github.com/cvgellhorn). I liked it so much I
+updated its dependencies to current and made a few changes so the color palette
+and title are settable.
