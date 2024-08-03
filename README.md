@@ -1,6 +1,8 @@
-# Landing Page Template
+# Simple Landing Page Placeholder
 
-*A simple landing page template with built-in email protection.*
+[![CI](https://github.com/EngJay/landing-page-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/EngJay/landing-page-template/actions/workflows/ci.yaml) &nbsp;![GitHub Release](https://img.shields.io/github/v/release/EngJay/landing-page-template) &nbsp;![GitHub License](https://img.shields.io/github/license/EngJay/landing-page-template)
+
+*A simple landing page placeholder with built-in email protection.*
 
 ![screenshot](screenshot.jpeg)
 
