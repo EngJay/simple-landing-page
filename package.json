@@ -15,7 +15,7 @@
     "url": "https://github.com/EngJay/landing-page-template"
   },
   "dependencies": {
-    "debounce": "^2.1.0",
+    "debounce": "^2.2.0",
     "mail-redactor": "^1.0.4",
     "trianglify": "^4.1.1"
   },
